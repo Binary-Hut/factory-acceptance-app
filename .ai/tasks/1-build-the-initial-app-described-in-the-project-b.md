@@ -1,6 +1,6 @@
 # Task #1 — Build the initial counter app
 
-Status: READY_FOR_APPROVAL
+Status: READY_FOR_DEVELOPMENT
 
 Issue: #1
 
