@@ -1,6 +1,6 @@
 # Task #1 — Build the initial counter app
 
-Status: PAUSED_AI_FAILURE
+Status: READY_FOR_REVIEW
 
 Issue: #1
 
@@ -69,3 +69,8 @@ Implement the smallest useful static single-page counter app for Factory accepta
 ## Approval
 
 Development must not start until this plan is explicitly approved.
+
+
+## Deterministic recovery note
+
+The Developer implementation itself completed. CI initially failed because the jsdom test harness attempted to resolve the page's external script through jsdom resource loading rather than evaluating the checked-in local script directly. The harness was corrected deterministically without another paid AI call. Review must still verify the implementation and CI results.
