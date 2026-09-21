@@ -1,0 +1,30 @@
+name: Run Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Run project deterministic test contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -f .factory/test.sh ]; then
+            echo "No .factory/test.sh yet. Planning-only repositories may omit it; implementation PRs must add the project-specific deterministic test contract."
+            exit 0
+          fi
+          chmod +x .factory/test.sh
+          ./.factory/test.sh
