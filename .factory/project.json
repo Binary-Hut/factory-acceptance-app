@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "created_by": "factory-console",
+  "project": {
+    "name": "Factory Acceptance App",
+    "slug": "factory-acceptance-app",
+    "description": "Create a very small single-page app with a heading, a counter starting at 0, increment and reset buttons, and deterministic tests for the counter behavior. Keep it dependency-light and suitable for end-to-end Factory acceptance testing.",
+    "project_type": "static-web",
+    "deployment": "vercel",
+    "agents": {
+      "planner": "manual-claude",
+      "developer": "codex",
+      "reviewer": "gemini"
+    },
+    "ai_budget": {
+      "developer_calls_per_stage": 1,
+      "reviewer_calls_per_stage": 1,
+      "automatic_retries": 0
+    }
+  }
+}
